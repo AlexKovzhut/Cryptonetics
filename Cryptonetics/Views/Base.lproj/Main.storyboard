@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MjP-hD-tmn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Logon View Controller-->
+        <scene sceneID="uuP-ju-UGm">
+            <objects>
+                <viewController id="MjP-hD-tmn" customClass="LogonViewController" customModule="Cryptonetics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tyu-Fd-0HN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-hh-cUO">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Dkj-ki-9Iw" kind="presentation" modalPresentationStyle="fullScreen" id="3aO-Hc-WNu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tWh-0k-fOE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psu-t0-Ntf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1923" y="149"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Or-1x-VRk">
+            <objects>
+                <navigationController id="Dkj-ki-9Iw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9af-sS-4EU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hQe-dR-IWS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eZF-2P-gUz" kind="relationship" relationship="rootViewController" id="WaD-mG-fNR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29u-Z6-74F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1038" y="149"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vie-1P-Aod">
+            <objects>
+                <tabBarController id="eZF-2P-gUz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Xia-un-bzW">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="xIE-ud-trL">
+                            <connections>
+                                <segue destination="Uqa-BX-1CR" kind="show" id="4es-7S-Cyj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v7R-f9-iox">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HeS-a1-wOF" kind="relationship" relationship="viewControllers" id="hAb-a3-sYQ"/>
+                        <segue destination="N2u-6P-Q6w" kind="relationship" relationship="viewControllers" id="NbA-A2-6Jp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FoO-5T-0y3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-160" y="149"/>
+        </scene>
+        <!--Profile Table View Controller-->
+        <scene sceneID="hDf-YX-5r5">
+            <objects>
+                <tableViewController id="Uqa-BX-1CR" customClass="ProfileTableViewController" customModule="Cryptonetics" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eS8-nS-5D4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Zhh-Fz-cYS" customClass="ProfileTableViewCell" customModule="Cryptonetics" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zhh-Fz-cYS" id="Nnc-eV-AdU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Uqa-BX-1CR" id="1wQ-4R-bXM"/>
+                            <outlet property="delegate" destination="Uqa-BX-1CR" id="6ST-oO-RwQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="fqc-C0-4AN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="siU-NH-Y2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161" y="887"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="hAx-0c-eeS">
+            <objects>
+                <collectionViewController id="N2u-6P-Q6w" customClass="NewsCollectionViewController" customModule="Cryptonetics" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="u45-93-RHE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CdR-7P-097">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="4Ng-3Q-z8g" customClass="NewsCollectionViewCell" customModule="Cryptonetics" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nyx-hO-o9Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <segue destination="8XX-cA-qdf" kind="show" id="7Hn-wp-wSd"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="N2u-6P-Q6w" id="opP-dR-mvb"/>
+                            <outlet property="delegate" destination="N2u-6P-Q6w" id="rie-1S-3ii"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="dgS-km-tEo"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUu-Jn-ikL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806" y="608"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="p0y-2U-dMq">
+            <objects>
+                <viewController id="8XX-cA-qdf" customClass="NewsViewController" customModule="Cryptonetics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bh6-yH-87w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="L6d-SO-suM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gCy-wV-b8r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whE-jM-Ttk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1703" y="607"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="4ad-y8-6m0">
+            <objects>
+                <tableViewController id="HeS-a1-wOF" customClass="CurrencyTableViewController" customModule="Cryptonetics" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SDX-6C-2UG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="l7j-Is-dHH" customClass="CurrencyTableViewCell" customModule="Cryptonetics" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l7j-Is-dHH" id="L4q-j8-OmA" customClass="CurrencyTableViewCell" customModule="Cryptonetics" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9F-2f-xzh">
+                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="M9F-2f-xzh" firstAttribute="leading" secondItem="L4q-j8-OmA" secondAttribute="leadingMargin" id="B75-58-eTi"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="M9F-2f-xzh" secondAttribute="bottom" id="QbZ-nw-liB"/>
+                                        <constraint firstItem="M9F-2f-xzh" firstAttribute="top" secondItem="L4q-j8-OmA" secondAttribute="topMargin" id="ZAp-8q-LSP"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="M9F-2f-xzh" secondAttribute="trailing" id="t64-1M-0xS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="M9F-2f-xzh" id="38h-QV-tIB"/>
+                                    <segue destination="f1S-Ta-uVH" kind="show" id="I0C-yV-cgg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HeS-a1-wOF" id="GBg-D3-pjz"/>
+                            <outlet property="delegate" destination="HeS-a1-wOF" id="4ZF-el-Kq8"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="1hZ-k0-bKz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjy-Xi-Pkd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806" y="-108"/>
+        </scene>
+        <!--Currency View Controller-->
+        <scene sceneID="x6N-Nq-xqw">
+            <objects>
+                <viewController id="f1S-Ta-uVH" customClass="CurrencyViewController" customModule="Cryptonetics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aCe-LJ-mZx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dq6-Bu-InK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r2P-91-BaH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fk-1o-S0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1704" y="-108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
