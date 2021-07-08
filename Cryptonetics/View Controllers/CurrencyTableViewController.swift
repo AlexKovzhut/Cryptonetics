@@ -7,10 +7,10 @@
 
 import UIKit
 
+
 class CurrencyTableViewController: UITableViewController {
     
     private var currency = [CurrencyData]()
-    let url = "https://rest.coinapi.io/v1/assets/?apikey/\(APIKey.apiKey)"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,16 +18,15 @@ class CurrencyTableViewController: UITableViewController {
         self.navigationController?.title = "Cryptonetics"
         
         tableView.register(CurrencyTableViewCell.self, forCellReuseIdentifier: CurrencyTableViewCell.identifier)
-
-    }
-    
-    func fetchData() {
-        NetworkManager.fetchData(url: url) { currency in
-            self.currency = currency
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+        
+        NetworkManager.fetchData { result in
+            switch result {
+            case .success(let currency): print(currency.count)
+            case .failure(let error): print("\(error)")
             }
         }
+        
+        
     }
     
     private func configureCell(cell: CurrencyTableViewCell, for indexPath: IndexPath) {
@@ -53,12 +52,8 @@ class CurrencyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrencyTableViewCell.identifier, for: indexPath) as? CurrencyTableViewCell else { fatalError() }
-
-        let currencyCell = currency[indexPath.row]
         
-        cell.label.text = currencyCell.name
-        
-        //configureCell(cell: cell, for: indexPath)
+        configureCell(cell: cell, for: indexPath)
         
         return cell
     }

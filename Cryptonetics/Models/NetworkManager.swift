@@ -9,21 +9,21 @@ import Foundation
 
 class NetworkManager {
     
-    static func fetchData(url: String, completion: @escaping (_ currency: CurrencyData) -> ()) {
-        guard let url = URL(string: url) else { return }
+    static func fetchData(completion: @escaping (Result<[CurrencyData], Error>) -> Void) {
+        guard let url = URL(string: "https://rest.coinapi.io/v1/assets/?apikey/\(APIKey.apiKey)") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             guard let data = data, error == nil else { return }
             
             do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
                 
-                let currency = try decoder.decode(CurrencyData.self, from: data)
-                completion(currency)
+                let decoder = JSONDecoder()
+                
+                let currency = try decoder.decode([CurrencyData].self, from: data)
+                completion(.success(currency))
             } catch let error {
-                error
+                completion(.failure(error))
             }
-    }.resume()
+        } .resume()
     }
 }
