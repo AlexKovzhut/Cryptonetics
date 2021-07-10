@@ -19,12 +19,12 @@ class CurrencyTableViewController: UITableViewController {
         
         tableView.register(CurrencyTableViewCell.self, forCellReuseIdentifier: CurrencyTableViewCell.identifier)
         
-        NetworkManager.fetchData { result in
-            switch result {
-            case .success(let currency): print(currency.count)
-            case .failure(let error): print("\(error)")
-            }
-        }
+//        NetworkManager.fetchData { result in
+//            switch result {
+//            case .success(let currency): print(currency.count)
+//            case .failure(let error): print("\(error)")
+//            }
+//        }
         
         
     }

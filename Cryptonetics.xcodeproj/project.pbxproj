@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E07A9F992699696300516F96 /* NewsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A9F982699696300516F96 /* NewsHelper.swift */; };
 		E0C3E7E526961B4800DB4596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C3E7E426961B4800DB4596 /* AppDelegate.swift */; };
 		E0C3E7E726961B4800DB4596 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C3E7E626961B4800DB4596 /* SceneDelegate.swift */; };
 		E0C3E7EC26961B4800DB4596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C3E7EA26961B4800DB4596 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E07A9F982699696300516F96 /* NewsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHelper.swift; sourceTree = "<group>"; };
 		E0C3E7E126961B4800DB4596 /* Cryptonetics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptonetics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C3E7E426961B4800DB4596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C3E7E626961B4800DB4596 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				E0C3E81B26961BC100DB4596 /* Currency.swift */,
 				E0C3E85B2696223100DB4596 /* CurrencyData.swift */,
+				E07A9F982699696300516F96 /* NewsHelper.swift */,
 				E0C3E82026961BD800DB4596 /* NetworkManager.swift */,
 				E0C3E8632696298600DB4596 /* APIKey.swift */,
 			);
@@ -341,6 +344,7 @@
 				E0C3E83E26961EB700DB4596 /* LogonViewController.swift in Sources */,
 				E0C3E7E726961B4800DB4596 /* SceneDelegate.swift in Sources */,
 				E0C3E84D26961EE400DB4596 /* NewsCollectionViewController.swift in Sources */,
+				E07A9F992699696300516F96 /* NewsHelper.swift in Sources */,
 				E0C3E85226961FE400DB4596 /* CurrencyViewController.swift in Sources */,
 				E0C3E85726961FF000DB4596 /* NewsViewController.swift in Sources */,
 				E0C3E84826961ED400DB4596 /* ProfileTableViewController.swift in Sources */,

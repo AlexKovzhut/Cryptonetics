@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "17CFB9EA-E8FE-4C06-87BD-04904C88B8A3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "243914CA-743F-4C7C-BEBE-B6AE369878D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cryptonetics/View Controllers/NewsCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "243914CA-743F-4C7C-BEBE-B6AE369878D2 - 7473f55fd9e3f8f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_021_1ED5EB5A5AECDFF5AB99C10F5EE86EDDE_func0"
+                  moduleName = "Cryptonetics"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexanderkovzhut/Documents/GitHub/Cryptonetics/Cryptonetics/View%20Controllers/NewsCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "243914CA-743F-4C7C-BEBE-B6AE369878D2 - e53aa6b33c92baab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cryptonetics.(reuseIdentifier in _1ED5EB5A5AECDFF5AB99A5F5EE86EDDE).unsafeMutableAddressor : Swift.String"
+                  moduleName = "Cryptonetics"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexanderkovzhut/Documents/GitHub/Cryptonetics/Cryptonetics/View%20Controllers/NewsCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
