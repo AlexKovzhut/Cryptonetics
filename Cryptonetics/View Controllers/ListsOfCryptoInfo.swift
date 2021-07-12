@@ -1,21 +1,22 @@
 //
-//  CurrencyTableViewController.swift
+//  ListsOfCryptoInfo.swift
 //  Cryptonetics
 //
-//  Created by Alexander Kovzhut on 07.07.2021.
+//  Created by Alexander Kovzhut on 12.07.2021.
 //
 
 import UIKit
 
-
-class CurrencyTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListsOfCryptoInfo: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.register(CurrencyTableViewCell.self, forCellReuseIdentifier: CurrencyTableViewCell.identifier)
+        tableView.register(CryptoInfoTableViewCell.self, forCellReuseIdentifier: CryptoInfoTableViewCell.identifier)
         
         return tableView
     } ()
+    
+    private var viewModels = [CryptoModel]()
     
     static let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -25,13 +26,13 @@ class CurrencyTableViewController: UIViewController, UITableViewDelegate, UITabl
         formatter.formatterBehavior = .default
         return formatter
     } ()
-    
-    private var viewModels = [CryptoTableViewCellViewModel]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(tableView.self)
+        title = "Cryptonetics"
+        
+        view.addSubview(tableView)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -40,8 +41,9 @@ class CurrencyTableViewController: UIViewController, UITableViewDelegate, UITabl
             switch result {
             case .success(let models):
                 self?.viewModels = models.compactMap({ model in
+                    //NumberFormatter
                     let price = model.price_usd ?? 0
-                    let formatter = CurrencyTableViewController.numberFormatter
+                    let formatter = ListsOfCryptoInfo.numberFormatter
                     let priceString = formatter.string(from: NSNumber(value: price))
                     
                     let iconURL = URL(
@@ -51,7 +53,7 @@ class CurrencyTableViewController: UIViewController, UITableViewDelegate, UITabl
                             }).first?.url ?? ""
                     )
                     
-                    return CryptoTableViewCellViewModel(
+                    return CryptoModel(
                         name: model.name ?? "N/A",
                         symbol: model.asset_id,
                         price: priceString ?? "",
@@ -65,17 +67,16 @@ class CurrencyTableViewController: UIViewController, UITableViewDelegate, UITabl
             case .failure(let error): print("Error: \(error)")
             }
         }
+ 
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
         
     }
     
-    // MARK: - Navigation
-
-    // MARK: - Table View Data Source
+    //MARK: - TableView
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.count
@@ -83,8 +84,8 @@ class CurrencyTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-                withIdentifier: CurrencyTableViewCell.identifier, for: indexPath)
-                as? CurrencyTableViewCell else {fatalError()
+                withIdentifier: CryptoInfoTableViewCell.identifier, for: indexPath)
+                as? CryptoInfoTableViewCell else {fatalError()
         }
         
         cell.configure(with: viewModels[indexPath.row])
@@ -92,5 +93,5 @@ class CurrencyTableViewController: UIViewController, UITableViewDelegate, UITabl
         return cell
     }
 
-}
 
+}

@@ -8,8 +8,6 @@
 import UIKit
 
 class NewsViewController: UIViewController {
-    
-    var networkManager = NetworkManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
