@@ -75,12 +75,15 @@ extension LoginView {
             loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
         ])
     }
-    
+}
+
+// MARK: - Actions
+
+extension LoginView {
     @objc private func didTapButton(_ sender: UIButton) {
         let vc = MainNewsPageView()
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .coverVertical
         self.present(vc, animated: true, completion: nil)
     }
-    
 }
